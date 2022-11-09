@@ -8,6 +8,10 @@
   "private": true,
   "type": "module",
   "packageManager": "yarn@1.22.19",
+  "files": [
+    "packages/next-sitemap/bin/*",
+    "packages/next-sitemap/dist/*"
+  ],
   "workspaces": {
     "packages": [
       "packages/*",
@@ -16,6 +20,7 @@
   },
   "scripts": {
     "clean": "tsc --build --clean",
+    "prepare": "npm run build",
     "dev:test": "jest --watchAll",
     "dev:tsc": "tsc --build --watch",
     "build": "turbo run build --force",
